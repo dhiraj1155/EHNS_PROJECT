@@ -1,0 +1,92 @@
+/* ─── Dashboard Page ──────────────────────────────────────────────────────── */
+.log-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1rem;
+}
+
+.loading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1rem;
+}
+
+.log-card-skeleton {
+    height: 180px;
+    background: linear-gradient(90deg,
+            rgba(30, 41, 59, 0.6) 0%,
+            rgba(51, 65, 85, 0.6) 50%,
+            rgba(30, 41, 59, 0.6) 100%);
+    background-size: 200% 100%;
+    border-radius: 12px;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-input {
+    flex: 1;
+    min-width: 160px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(99, 179, 237, 0.2);
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filter-input:focus {
+    border-color: rgba(99, 179, 237, 0.6);
+}
+
+.filter-input option {
+    background: #1e293b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #475569;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #64748b;
+    margin-bottom: 0.5rem;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(99, 179, 237, 0.1);
+}
+
+.page-info {
+    font-size: 0.8rem;
+    color: #64748b;
+}
